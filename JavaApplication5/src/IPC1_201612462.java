@@ -154,6 +154,47 @@ public static Scanner a = new Scanner(System.in);
        
 
     }
+    
+    private void Promedio(){
+        
+    int matriz [] [] = new int [5][5];
+      
+      int alumno1[] =  {1,20,30,50,30};
+      int alumno2[] =  {2,20,39,50,80};
+      int alumno3[] =  {3,20,30,50,30};
+      int alumno4[] =  {4,20,34,50,80};
+      int alumno5[] =  {5,20,36,50,30};
+
+      
+
+        int fila;
+        int columna;
+        int contador = 1;
+        for(fila = 0; fila<matriz.length; fila++){
+            for(columna = 0; columna<matriz.length; columna++){
+                if(fila==0){
+                matriz[fila][columna]=alumno1[columna];
+                }else if(fila==1){
+                matriz[fila][columna]=alumno2[columna];
+                }else if(fila==2){
+                matriz[fila][columna]=alumno3[columna];
+                }else if(fila ==3){
+                matriz[fila][columna]=alumno4[columna];
+                }else if(fila ==4){
+                matriz[fila][columna]=alumno5[columna];
+                }
+            }
+        }
+        
+         for(fila = 0; fila<matriz.length; fila++){
+             
+            for(columna = 0; columna<matriz.length; columna++){
+                System.out.print("\t"+matriz[fila][columna]+" ");
+                
+            }
+             System.out.println("");
+        }
+    }
     }
     
     
