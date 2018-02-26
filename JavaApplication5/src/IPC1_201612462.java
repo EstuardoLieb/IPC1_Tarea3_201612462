@@ -62,7 +62,8 @@ public static Scanner a = new Scanner(System.in);
                 
             case 3:  
                 MayorMenor();
-            case 4:    
+            case 4:  
+                Promedio();
             case 5:   
                 exit = true;
                 System.out.println("Fin del programa");
@@ -157,42 +158,42 @@ public static Scanner a = new Scanner(System.in);
     
     private void Promedio(){
         
-    int matriz [] [] = new int [5][5];
-      
-      int alumno1[] =  {1,20,30,50,30};
-      int alumno2[] =  {2,20,39,50,80};
-      int alumno3[] =  {3,20,30,50,30};
-      int alumno4[] =  {4,20,34,50,80};
-      int alumno5[] =  {5,20,36,50,30};
+    int matriz [] [] = new int [5][5]; // Declaración de la matriz
+      //Espacio para dar estética
+      int alumno1[] =  {1,20,30,50,30};//Declaración del vector entero Alumno 1, con su ID y sus notas
+      int alumno2[] =  {2,20,39,50,80};// lo de arriba x2
+      int alumno3[] =  {3,20,30,50,30};//x3
+      int alumno4[] =  {4,20,34,50,80};//x4
+      int alumno5[] =  {5,20,36,50,30};//x5
 
       
 
-        int fila;
-        int columna;
-        int contador = 1;
-        for(fila = 0; fila<matriz.length; fila++){
-            for(columna = 0; columna<matriz.length; columna++){
-                if(fila==0){
-                matriz[fila][columna]=alumno1[columna];
-                }else if(fila==1){
-                matriz[fila][columna]=alumno2[columna];
-                }else if(fila==2){
-                matriz[fila][columna]=alumno3[columna];
-                }else if(fila ==3){
-                matriz[fila][columna]=alumno4[columna];
-                }else if(fila ==4){
-                matriz[fila][columna]=alumno5[columna];
+        int fila;//Declaración del entero Fila   
+        int columna;//Declaración dek entero Columna
+        int contador = 1; //Declaración del entero Contador, empezando en 1
+        for(fila = 0; fila<matriz.length; fila++){//inicio del ciclo for  para las filas   
+            for(columna = 0; columna<matriz.length; columna++){//inicio ciclo for para las columnas
+                if(fila==0){//inicio de la condicionante if
+                matriz[fila][columna]=alumno1[columna];//Si fila es igual a 0, entonces la matriz toma el valor de alumno1 en columna
+                }else if(fila==1){// de lo contrario, si fila es igual a 1
+                matriz[fila][columna]=alumno2[columna];//La matriz toma el valor de alumno2 en columna
+                }else if(fila==2){// de lo contrario, si fila es igual a 2
+                matriz[fila][columna]=alumno3[columna];//La matriz toma el valor de alumno3 en columna
+                }else if(fila ==3){// de lo contrario, si fila es igual a 3
+                matriz[fila][columna]=alumno4[columna];//La matriz toma el valor de alumno4 en columna
+                }else if(fila ==4){// de lo contrario, si fila es igual a 4
+                matriz[fila][columna]=alumno5[columna];//La matriz toma el valor de alumno5 en columna
                 }
             }
         }
         
-         for(fila = 0; fila<matriz.length; fila++){
+         for(fila = 0; fila<matriz.length; fila++){// inicio de for, en donde fila es igual a 0 y es menor a la longitud de la matriz
              
-            for(columna = 0; columna<matriz.length; columna++){
-                System.out.print("\t"+matriz[fila][columna]+" ");
-                
+            for(columna = 0; columna<matriz.length; columna++){ //inicio de for para la columna
+                System.out.print("\t"+matriz[fila][columna]+" ");//imprimir en pantalla el valor de la matriz
+               
             }
-             System.out.println("");
+             System.out.println("");//dejar espacio
         }
     }
     }
